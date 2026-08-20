@@ -1,0 +1,402 @@
+2026-07-31 15:13:49 INFO     log save at: log/pheme/pheme_tdp_l21e-4_idp0_fdrop0.log
+2026-07-31 15:13:52 INFO     Loaded 2752 image tensors from /mnt1/userhome/tangpang/shichenglong/proj/MMFakeNewDetector/dataset/pheme/img_name2tensor_only_resize.pkl.
+2026-07-31 15:13:52 INFO     [weak-supervision] csv_file=/mnt1/userhome/tangpang/shichenglong/proj/MORE-FND/dataset/pheme/pheme_train.csv
+2026-07-31 15:13:52 INFO     [weak-supervision] raw_csv_columns=['Unnamed: 0', 'image', 'mid', 'text', 'label', 'event', 'fake_type_id', 'fake_type_name', 'confidence', 'rationale']
+2026-07-31 15:13:52 INFO     [weak-supervision] use_llm_weak=True has_fake_type_id=True has_confidence=True annotated_rows=100 retained(>=0.5)=100 (if has_confidence=False, the annotated CSV is not at the csv_file path above)
+2026-07-31 15:13:56 INFO     skip (shape mismatch) proto_logits: src=(6, 64) tgt=(7, 64)
+2026-07-31 15:13:56 INFO     skip (shape mismatch) desc_input_ids: src=(6, 48) tgt=(7, 48)
+2026-07-31 15:13:56 INFO     skip (shape mismatch) desc_attention_mask: src=(6, 48) tgt=(7, 48)
+2026-07-31 15:13:56 INFO     Loaded pretrained checkpoint: save/pretrain/tdp_src_K64_lpcl0.4_tau0.1.pth
+2026-07-31 15:13:56 INFO     Missing keys (incl. fresh p_unk params): ['proto_logits', 'desc_input_ids', 'desc_attention_mask']
+2026-07-31 15:13:56 INFO     Unexpected keys: []
+2026-07-31 15:13:56 INFO     Text encoder TRAINABLE (encoder_learning_rate=1e-05).
+2026-07-31 15:13:56 INFO     Image encoder TRAINABLE (encoder_learning_rate=1e-05).
+2026-07-31 15:13:56 INFO     Start TDP target adaptation...
+2026-07-31 15:13:56 INFO     Discovering pattern centers before finetune epoch 0.
+2026-07-31 15:14:06 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=0).
+2026-07-31 15:14:27 INFO                   precision    recall  f1-score   support
+           0     0.8578    0.8935    0.8753       432
+           1     0.7051    0.6322    0.6667       174
+    accuracy                         0.8185       606
+   macro avg     0.7815    0.7629    0.7710       606
+weighted avg     0.8139    0.8185    0.8154       606
+2026-07-31 15:14:27 INFO     Epoch 0: train_loss=2.9723 [l_bin=0.9761 l_bal=1.4145 r_div=7.1409 l_weak=1.6875 l_route_t=0.9589] eval_loss=0.7669 metrics={'acc': 0.8184818481848185, 'precision': 0.7814529914529915, 'recall': 0.7628512132822478, 'f1': 0.7709750566893424}
+2026-07-31 15:14:28 INFO     Saved best finetuned model to: save/finetune/pheme_tdp_l21e-4_idp0_fdrop0.pth
+2026-07-31 15:14:28 INFO     Discovering pattern centers before finetune epoch 1.
+2026-07-31 15:14:34 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=1).
+2026-07-31 15:14:54 INFO                   precision    recall  f1-score   support
+           0     0.8884    0.8843    0.8863       432
+           1     0.7159    0.7241    0.7200       174
+    accuracy                         0.8383       606
+   macro avg     0.8021    0.8042    0.8032       606
+weighted avg     0.8389    0.8383    0.8386       606
+2026-07-31 15:14:54 INFO     Epoch 1: train_loss=1.9040 [l_bin=0.5692 l_bal=1.2849 r_div=4.8799 l_weak=1.0837 l_route_t=0.7379] eval_loss=0.8217 metrics={'acc': 0.8382838283828383, 'precision': 0.8021405919661734, 'recall': 0.8041985951468711, 'f1': 0.8031554524361949}
+2026-07-31 15:14:55 INFO     Saved best finetuned model to: save/finetune/pheme_tdp_l21e-4_idp0_fdrop0.pth
+2026-07-31 15:14:55 INFO     Discovering pattern centers before finetune epoch 2.
+2026-07-31 15:15:02 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=2).
+2026-07-31 15:15:21 INFO                   precision    recall  f1-score   support
+           0     0.8742    0.9329    0.9026       432
+           1     0.8000    0.6667    0.7273       174
+    accuracy                         0.8564       606
+   macro avg     0.8371    0.7998    0.8149       606
+weighted avg     0.8529    0.8564    0.8522       606
+2026-07-31 15:15:21 INFO     Epoch 2: train_loss=1.0951 [l_bin=0.4116 l_bal=1.1389 r_div=2.5508 l_weak=0.5103 l_route_t=0.3373] eval_loss=0.5019 metrics={'acc': 0.8564356435643564, 'precision': 0.8370932754880694, 'recall': 0.7997685185185185, 'f1': 0.8149241575893311}
+2026-07-31 15:15:22 INFO     Saved best finetuned model to: save/finetune/pheme_tdp_l21e-4_idp0_fdrop0.pth
+2026-07-31 15:15:22 INFO     Discovering pattern centers before finetune epoch 3.
+2026-07-31 15:15:29 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=3).
+2026-07-31 15:15:48 INFO                   precision    recall  f1-score   support
+           0     0.8662    0.9444    0.9037       432
+           1     0.8222    0.6379    0.7184       174
+    accuracy                         0.8564       606
+   macro avg     0.8442    0.7912    0.8111       606
+weighted avg     0.8536    0.8564    0.8505       606
+2026-07-31 15:15:48 INFO     Epoch 3: train_loss=0.7675 [l_bin=0.3096 l_bal=1.0903 r_div=1.4072 l_weak=0.3203 l_route_t=0.1449] eval_loss=0.6009 metrics={'acc': 0.8564356435643564, 'precision': 0.8442321302193914, 'recall': 0.7911877394636015, 'f1': 0.8110505434957908}
+2026-07-31 15:15:48 INFO     EarlyStopping Counter: 1 out of 20.
+2026-07-31 15:15:48 INFO     Discovering pattern centers before finetune epoch 4.
+2026-07-31 15:15:55 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=4).
+2026-07-31 15:16:15 INFO                   precision    recall  f1-score   support
+           0     0.9087    0.8981    0.9034       432
+           1     0.7542    0.7759    0.7649       174
+    accuracy                         0.8630       606
+   macro avg     0.8314    0.8370    0.8341       606
+weighted avg     0.8643    0.8630    0.8636       606
+2026-07-31 15:16:15 INFO     Epoch 4: train_loss=0.5684 [l_bin=0.2354 l_bal=1.1195 r_div=0.6084 l_weak=0.2091 l_route_t=0.0588] eval_loss=0.7678 metrics={'acc': 0.863036303630363, 'precision': 0.8314275247602476, 'recall': 0.8370051085568326, 'f1': 0.8341242699363842}
+2026-07-31 15:16:15 INFO     Saved best finetuned model to: save/finetune/pheme_tdp_l21e-4_idp0_fdrop0.pth
+2026-07-31 15:16:15 INFO     Discovering pattern centers before finetune epoch 5.
+2026-07-31 15:16:22 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=5).
+2026-07-31 15:16:42 INFO                   precision    recall  f1-score   support
+           0     0.8753    0.9583    0.9149       432
+           1     0.8647    0.6609    0.7492       174
+    accuracy                         0.8729       606
+   macro avg     0.8700    0.8096    0.8321       606
+weighted avg     0.8722    0.8729    0.8673       606
+2026-07-31 15:16:42 INFO     Epoch 5: train_loss=0.4459 [l_bin=0.1652 l_bal=1.1026 r_div=0.4613 l_weak=0.1625 l_route_t=0.0335] eval_loss=0.6926 metrics={'acc': 0.8729372937293729, 'precision': 0.8699629623742231, 'recall': 0.8096264367816093, 'f1': 0.8320513974121331}
+2026-07-31 15:16:43 INFO     Saved best finetuned model to: save/finetune/pheme_tdp_l21e-4_idp0_fdrop0.pth
+2026-07-31 15:16:43 INFO     Discovering pattern centers before finetune epoch 6.
+2026-07-31 15:16:49 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=6).
+2026-07-31 15:17:08 INFO                   precision    recall  f1-score   support
+           0     0.8817    0.9491    0.9142       432
+           1     0.8440    0.6839    0.7556       174
+    accuracy                         0.8729       606
+   macro avg     0.8628    0.8165    0.8349       606
+weighted avg     0.8709    0.8729    0.8686       606
+2026-07-31 15:17:08 INFO     Epoch 6: train_loss=0.3413 [l_bin=0.1076 l_bal=1.1335 r_div=0.3484 l_weak=0.1141 l_route_t=0.0269] eval_loss=0.8119 metrics={'acc': 0.8729372937293729, 'precision': 0.8628460306566004, 'recall': 0.8164910600255428, 'f1': 0.8348569305091045}
+2026-07-31 15:17:08 INFO     EarlyStopping Counter: 1 out of 20.
+2026-07-31 15:17:08 INFO     Discovering pattern centers before finetune epoch 7.
+2026-07-31 15:17:15 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=7).
+2026-07-31 15:17:35 INFO                   precision    recall  f1-score   support
+           0     0.9065    0.8750    0.8905       432
+           1     0.7143    0.7759    0.7438       174
+    accuracy                         0.8465       606
+   macro avg     0.8104    0.8254    0.8171       606
+weighted avg     0.8513    0.8465    0.8483       606
+2026-07-31 15:17:35 INFO     Epoch 7: train_loss=0.3319 [l_bin=0.0794 l_bal=1.1677 r_div=0.2577 l_weak=0.1296 l_route_t=0.0353] eval_loss=1.2756 metrics={'acc': 0.8465346534653465, 'precision': 0.8103802672147996, 'recall': 0.8254310344827587, 'f1': 0.8171305084250795}
+2026-07-31 15:17:35 INFO     EarlyStopping Counter: 2 out of 20.
+2026-07-31 15:17:35 INFO     Discovering pattern centers before finetune epoch 8.
+2026-07-31 15:17:41 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=8).
+2026-07-31 15:18:01 INFO                   precision    recall  f1-score   support
+           0     0.8891    0.9653    0.9256       432
+           1     0.8905    0.7011    0.7846       174
+    accuracy                         0.8894       606
+   macro avg     0.8898    0.8332    0.8551       606
+weighted avg     0.8895    0.8894    0.8851       606
+2026-07-31 15:18:01 INFO     Epoch 8: train_loss=0.2636 [l_bin=0.0976 l_bal=1.1147 r_div=0.2325 l_weak=0.0496 l_route_t=0.0265] eval_loss=0.7008 metrics={'acc': 0.8894389438943895, 'precision': 0.8898183742393351, 'recall': 0.8332136015325671, 'f1': 0.855102048099468}
+2026-07-31 15:18:02 INFO     Saved best finetuned model to: save/finetune/pheme_tdp_l21e-4_idp0_fdrop0.pth
+2026-07-31 15:18:02 INFO     Discovering pattern centers before finetune epoch 9.
+2026-07-31 15:18:09 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=9).
+2026-07-31 15:18:29 INFO                   precision    recall  f1-score   support
+           0     0.8863    0.9560    0.9198       432
+           1     0.8643    0.6954    0.7707       174
+    accuracy                         0.8812       606
+   macro avg     0.8753    0.8257    0.8453       606
+weighted avg     0.8800    0.8812    0.8770       606
+2026-07-31 15:18:29 INFO     Epoch 9: train_loss=0.2223 [l_bin=0.0503 l_bal=1.0791 r_div=0.1948 l_weak=0.0609 l_route_t=0.0120] eval_loss=0.8776 metrics={'acc': 0.8811881188118812, 'precision': 0.8752759043531576, 'recall': 0.8257104086845466, 'f1': 0.8452612316116495}
+2026-07-31 15:18:29 INFO     EarlyStopping Counter: 1 out of 20.
+2026-07-31 15:18:29 INFO     Discovering pattern centers before finetune epoch 10.
+2026-07-31 15:18:36 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=10).
+2026-07-31 15:18:56 INFO                   precision    recall  f1-score   support
+           0     0.8841    0.9537    0.9176       432
+           1     0.8571    0.6897    0.7643       174
+    accuracy                         0.8779       606
+   macro avg     0.8706    0.8217    0.8410       606
+weighted avg     0.8764    0.8779    0.8736       606
+2026-07-31 15:18:56 INFO     Epoch 10: train_loss=0.1604 [l_bin=0.0375 l_bal=1.0829 r_div=0.1839 l_weak=0.0123 l_route_t=0.0041] eval_loss=0.9549 metrics={'acc': 0.8778877887788779, 'precision': 0.8706315144083384, 'recall': 0.8216794380587484, 'f1': 0.8409629324897507}
+2026-07-31 15:18:56 INFO     EarlyStopping Counter: 2 out of 20.
+2026-07-31 15:18:56 INFO     Discovering pattern centers before finetune epoch 11.
+2026-07-31 15:19:02 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=11).
+2026-07-31 15:19:23 INFO                   precision    recall  f1-score   support
+           0     0.8911    0.9468    0.9181       432
+           1     0.8435    0.7126    0.7726       174
+    accuracy                         0.8795       606
+   macro avg     0.8673    0.8297    0.8453       606
+weighted avg     0.8774    0.8795    0.8763       606
+2026-07-31 15:19:23 INFO     Epoch 11: train_loss=0.2248 [l_bin=0.0891 l_bal=1.0748 r_div=0.1844 l_weak=0.0258 l_route_t=0.0050] eval_loss=0.9028 metrics={'acc': 0.8795379537953796, 'precision': 0.8673024765461741, 'recall': 0.8297014687100894, 'f1': 0.8453276272590915}
+2026-07-31 15:19:23 INFO     EarlyStopping Counter: 3 out of 20.
+2026-07-31 15:19:23 INFO     Discovering pattern centers before finetune epoch 12.
+2026-07-31 15:19:29 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=12).
+2026-07-31 15:19:50 INFO                   precision    recall  f1-score   support
+           0     0.9097    0.9329    0.9211       432
+           1     0.8221    0.7701    0.7953       174
+    accuracy                         0.8861       606
+   macro avg     0.8659    0.8515    0.8582       606
+weighted avg     0.8845    0.8861    0.8850       606
+2026-07-31 15:19:50 INFO     Epoch 12: train_loss=0.1531 [l_bin=0.0351 l_bal=1.0756 r_div=0.1537 l_weak=0.0080 l_route_t=0.0098] eval_loss=1.0369 metrics={'acc': 0.8861386138613861, 'precision': 0.8658962179229737, 'recall': 0.851492656449553, 'f1': 0.8581975413310725}
+2026-07-31 15:19:50 INFO     EarlyStopping Counter: 4 out of 20.
+2026-07-31 15:19:50 INFO     Discovering pattern centers before finetune epoch 13.
+2026-07-31 15:19:56 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=13).
+2026-07-31 15:20:12 INFO                   precision    recall  f1-score   support
+           0     0.9011    0.9282    0.9145       432
+           1     0.8075    0.7471    0.7761       174
+    accuracy                         0.8762       606
+   macro avg     0.8543    0.8377    0.8453       606
+weighted avg     0.8742    0.8762    0.8748       606
+2026-07-31 15:20:12 INFO     Epoch 13: train_loss=0.1632 [l_bin=0.0517 l_bal=1.0926 r_div=0.1481 l_weak=0.0007 l_route_t=0.0011] eval_loss=0.9845 metrics={'acc': 0.8762376237623762, 'precision': 0.8542885058273431, 'recall': 0.8376835887611749, 'f1': 0.845300294422982}
+2026-07-31 15:20:12 INFO     EarlyStopping Counter: 5 out of 20.
+2026-07-31 15:20:12 INFO     Discovering pattern centers before finetune epoch 14.
+2026-07-31 15:20:18 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=14).
+2026-07-31 15:20:34 INFO                   precision    recall  f1-score   support
+           0     0.8782    0.9676    0.9207       432
+           1     0.8923    0.6667    0.7632       174
+    accuracy                         0.8812       606
+   macro avg     0.8852    0.8171    0.8419       606
+weighted avg     0.8822    0.8812    0.8755       606
+2026-07-31 15:20:34 INFO     Epoch 14: train_loss=0.1367 [l_bin=0.0253 l_bal=1.0836 r_div=0.1479 l_weak=0.0015 l_route_t=0.0011] eval_loss=1.0019 metrics={'acc': 0.8811881188118812, 'precision': 0.885229476405947, 'recall': 0.8171296296296295, 'f1': 0.8419313702759101}
+2026-07-31 15:20:34 INFO     EarlyStopping Counter: 6 out of 20.
+2026-07-31 15:20:34 INFO     Discovering pattern centers before finetune epoch 15.
+2026-07-31 15:20:40 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=15).
+2026-07-31 15:20:57 INFO                   precision    recall  f1-score   support
+           0     0.8865    0.9583    0.9210       432
+           1     0.8705    0.6954    0.7732       174
+    accuracy                         0.8828       606
+   macro avg     0.8785    0.8269    0.8471       606
+weighted avg     0.8819    0.8828    0.8786       606
+2026-07-31 15:20:57 INFO     Epoch 15: train_loss=0.1478 [l_bin=0.0289 l_bal=1.0767 r_div=0.1346 l_weak=0.0093 l_route_t=0.0058] eval_loss=0.9763 metrics={'acc': 0.8828382838283828, 'precision': 0.8785066165483031, 'recall': 0.826867816091954, 'f1': 0.8470931492926113}
+2026-07-31 15:20:57 INFO     EarlyStopping Counter: 7 out of 20.
+2026-07-31 15:20:57 INFO     Discovering pattern centers before finetune epoch 16.
+2026-07-31 15:21:02 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=16).
+2026-07-31 15:21:20 INFO                   precision    recall  f1-score   support
+           0     0.8954    0.9514    0.9226       432
+           1     0.8571    0.7241    0.7850       174
+    accuracy                         0.8861       606
+   macro avg     0.8763    0.8378    0.8538       606
+weighted avg     0.8844    0.8861    0.8831       606
+2026-07-31 15:21:20 INFO     Epoch 16: train_loss=0.1408 [l_bin=0.0282 l_bal=1.0715 r_div=0.1411 l_weak=0.0036 l_route_t=0.0050] eval_loss=0.9663 metrics={'acc': 0.8861386138613861, 'precision': 0.8762838468720822, 'recall': 0.8377634099616857, 'f1': 0.8538028257654426}
+2026-07-31 15:21:20 INFO     EarlyStopping Counter: 8 out of 20.
+2026-07-31 15:21:20 INFO     Discovering pattern centers before finetune epoch 17.
+2026-07-31 15:21:25 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=17).
+2026-07-31 15:21:43 INFO                   precision    recall  f1-score   support
+           0     0.9000    0.9583    0.9283       432
+           1     0.8767    0.7356    0.8000       174
+    accuracy                         0.8944       606
+   macro avg     0.8884    0.8470    0.8641       606
+weighted avg     0.8933    0.8944    0.8914       606
+2026-07-31 15:21:43 INFO     Epoch 17: train_loss=0.1525 [l_bin=0.0421 l_bal=1.0811 r_div=0.1390 l_weak=0.0007 l_route_t=0.0018] eval_loss=0.8864 metrics={'acc': 0.8943894389438944, 'precision': 0.8883561643835616, 'recall': 0.8469827586206897, 'f1': 0.8641255605381166}
+2026-07-31 15:21:44 INFO     Saved best finetuned model to: save/finetune/pheme_tdp_l21e-4_idp0_fdrop0.pth
+2026-07-31 15:21:44 INFO     Discovering pattern centers before finetune epoch 18.
+2026-07-31 15:21:49 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=18).
+2026-07-31 15:22:06 INFO                   precision    recall  f1-score   support
+           0     0.9058    0.9352    0.9203       432
+           1     0.8250    0.7586    0.7904       174
+    accuracy                         0.8845       606
+   macro avg     0.8654    0.8469    0.8553       606
+weighted avg     0.8826    0.8845    0.8830       606
+2026-07-31 15:22:06 INFO     Epoch 18: train_loss=0.1656 [l_bin=0.0211 l_bal=1.0600 r_div=0.1210 l_weak=0.0358 l_route_t=0.0159] eval_loss=0.9983 metrics={'acc': 0.8844884488448845, 'precision': 0.865414798206278, 'recall': 0.8469029374201789, 'f1': 0.8553462550980044}
+2026-07-31 15:22:06 INFO     EarlyStopping Counter: 1 out of 20.
+2026-07-31 15:22:06 INFO     Discovering pattern centers before finetune epoch 19.
+2026-07-31 15:22:12 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=19).
+2026-07-31 15:22:29 INFO                   precision    recall  f1-score   support
+           0     0.8939    0.9560    0.9239       432
+           1     0.8681    0.7184    0.7862       174
+    accuracy                         0.8878       606
+   macro avg     0.8810    0.8372    0.8551       606
+weighted avg     0.8865    0.8878    0.8844       606
+2026-07-31 15:22:29 INFO     Epoch 19: train_loss=0.1696 [l_bin=0.0238 l_bal=1.0711 r_div=0.1352 l_weak=0.0353 l_route_t=0.0207] eval_loss=1.0689 metrics={'acc': 0.8877887788778878, 'precision': 0.8809974747474747, 'recall': 0.8372046615581098, 'f1': 0.8550504410957748}
+2026-07-31 15:22:29 INFO     EarlyStopping Counter: 2 out of 20.
+2026-07-31 15:22:29 INFO     Discovering pattern centers before finetune epoch 20.
+2026-07-31 15:22:34 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=20).
+2026-07-31 15:22:51 INFO                   precision    recall  f1-score   support
+           0     0.9200    0.9051    0.9125       432
+           1     0.7735    0.8046    0.7887       174
+    accuracy                         0.8762       606
+   macro avg     0.8467    0.8548    0.8506       606
+weighted avg     0.8779    0.8762    0.8770       606
+2026-07-31 15:22:51 INFO     Epoch 20: train_loss=0.1361 [l_bin=0.0267 l_bal=1.0759 r_div=0.1174 l_weak=0.0006 l_route_t=0.0007] eval_loss=1.1331 metrics={'acc': 0.8762376237623762, 'precision': 0.8467403314917128, 'recall': 0.854845146871009, 'f1': 0.8506089043009515}
+2026-07-31 15:22:51 INFO     EarlyStopping Counter: 3 out of 20.
+2026-07-31 15:22:51 INFO     Discovering pattern centers before finetune epoch 21.
+2026-07-31 15:22:57 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=21).
+2026-07-31 15:23:13 INFO                   precision    recall  f1-score   support
+           0     0.8771    0.9583    0.9159       432
+           1     0.8657    0.6667    0.7532       174
+    accuracy                         0.8746       606
+   macro avg     0.8714    0.8125    0.8346       606
+weighted avg     0.8738    0.8746    0.8692       606
+2026-07-31 15:23:13 INFO     Epoch 21: train_loss=0.1296 [l_bin=0.0185 l_bal=1.0860 r_div=0.1415 l_weak=0.0008 l_route_t=0.0037] eval_loss=1.0578 metrics={'acc': 0.8745874587458746, 'precision': 0.8713951429294207, 'recall': 0.8125, 'f1': 0.8345879783932881}
+2026-07-31 15:23:13 INFO     EarlyStopping Counter: 4 out of 20.
+2026-07-31 15:23:13 INFO     Discovering pattern centers before finetune epoch 22.
+2026-07-31 15:23:19 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=22).
+2026-07-31 15:23:36 INFO                   precision    recall  f1-score   support
+           0     0.8918    0.9537    0.9217       432
+           1     0.8611    0.7126    0.7799       174
+    accuracy                         0.8845       606
+   macro avg     0.8764    0.8332    0.8508       606
+weighted avg     0.8830    0.8845    0.8810       606
+2026-07-31 15:23:36 INFO     Epoch 22: train_loss=0.1896 [l_bin=0.0450 l_bal=1.0707 r_div=0.1236 l_weak=0.0357 l_route_t=0.0062] eval_loss=0.9490 metrics={'acc': 0.8844884488448845, 'precision': 0.8764430014430015, 'recall': 0.8331736909323116, 'f1': 0.8507872187750622}
+2026-07-31 15:23:36 INFO     EarlyStopping Counter: 5 out of 20.
+2026-07-31 15:23:36 INFO     Discovering pattern centers before finetune epoch 23.
+2026-07-31 15:23:41 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=23).
+2026-07-31 15:23:59 INFO                   precision    recall  f1-score   support
+           0     0.8960    0.9375    0.9163       432
+           1     0.8247    0.7299    0.7744       174
+    accuracy                         0.8779       606
+   macro avg     0.8603    0.8337    0.8453       606
+weighted avg     0.8755    0.8779    0.8755       606
+2026-07-31 15:23:59 INFO     Epoch 23: train_loss=0.1716 [l_bin=0.0172 l_bal=1.0756 r_div=0.1244 l_weak=0.0438 l_route_t=0.0174] eval_loss=1.0446 metrics={'acc': 0.8778877887788779, 'precision': 0.8603465118951845, 'recall': 0.8336925287356323, 'f1': 0.84533991833131}
+2026-07-31 15:23:59 INFO     EarlyStopping Counter: 6 out of 20.
+2026-07-31 15:23:59 INFO     Discovering pattern centers before finetune epoch 24.
+2026-07-31 15:24:04 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=24).
+2026-07-31 15:24:21 INFO                   precision    recall  f1-score   support
+           0     0.8860    0.9537    0.9186       432
+           1     0.8582    0.6954    0.7683       174
+    accuracy                         0.8795       606
+   macro avg     0.8721    0.8246    0.8434       606
+weighted avg     0.8780    0.8795    0.8754       606
+2026-07-31 15:24:21 INFO     Epoch 24: train_loss=0.2346 [l_bin=0.0204 l_bal=1.0788 r_div=0.1126 l_weak=0.0965 l_route_t=0.0872] eval_loss=1.0690 metrics={'acc': 0.8795379537953796, 'precision': 0.8720887668725692, 'recall': 0.8245530012771392, 'f1': 0.8434357912618782}
+2026-07-31 15:24:21 INFO     EarlyStopping Counter: 7 out of 20.
+2026-07-31 15:24:21 INFO     Discovering pattern centers before finetune epoch 25.
+2026-07-31 15:24:26 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=25).
+2026-07-31 15:24:43 INFO                   precision    recall  f1-score   support
+           0     0.9279    0.8634    0.8945       432
+           1     0.7108    0.8333    0.7672       174
+    accuracy                         0.8548       606
+   macro avg     0.8193    0.8484    0.8308       606
+weighted avg     0.8655    0.8548    0.8579       606
+2026-07-31 15:24:43 INFO     Epoch 25: train_loss=0.1301 [l_bin=0.0234 l_bal=1.0530 r_div=0.1018 l_weak=0.0003 l_route_t=0.0008] eval_loss=1.2741 metrics={'acc': 0.8547854785478548, 'precision': 0.8193225051214517, 'recall': 0.8483796296296297, 'f1': 0.8308400898328956}
+2026-07-31 15:24:43 INFO     EarlyStopping Counter: 8 out of 20.
+2026-07-31 15:24:43 INFO     Discovering pattern centers before finetune epoch 26.
+2026-07-31 15:24:49 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=26).
+2026-07-31 15:25:06 INFO                   precision    recall  f1-score   support
+           0     0.8940    0.9375    0.9153       432
+           1     0.8235    0.7241    0.7706       174
+    accuracy                         0.8762       606
+   macro avg     0.8588    0.8308    0.8429       606
+weighted avg     0.8738    0.8762    0.8737       606
+2026-07-31 15:25:06 INFO     Epoch 26: train_loss=0.1307 [l_bin=0.0107 l_bal=1.0667 r_div=0.1146 l_weak=0.0121 l_route_t=0.0011] eval_loss=1.1324 metrics={'acc': 0.8762376237623762, 'precision': 0.8587845734320219, 'recall': 0.8308189655172413, 'f1': 0.842948219561499}
+2026-07-31 15:25:06 INFO     EarlyStopping Counter: 9 out of 20.
+2026-07-31 15:25:06 INFO     Discovering pattern centers before finetune epoch 27.
+2026-07-31 15:25:11 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=27).
+2026-07-31 15:25:28 INFO                   precision    recall  f1-score   support
+           0     0.8930    0.9468    0.9191       432
+           1     0.8446    0.7184    0.7764       174
+    accuracy                         0.8812       606
+   macro avg     0.8688    0.8326    0.8477       606
+weighted avg     0.8791    0.8812    0.8781       606
+2026-07-31 15:25:28 INFO     Epoch 27: train_loss=0.1559 [l_bin=0.0104 l_bal=1.0770 r_div=0.1009 l_weak=0.0338 l_route_t=0.0301] eval_loss=1.0961 metrics={'acc': 0.8811881188118812, 'precision': 0.8688038475156379, 'recall': 0.8325750319284801, 'f1': 0.847749319561728}
+2026-07-31 15:25:28 INFO     EarlyStopping Counter: 10 out of 20.
+2026-07-31 15:25:28 INFO     Discovering pattern centers before finetune epoch 28.
+2026-07-31 15:25:33 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=28).
+2026-07-31 15:25:51 INFO                   precision    recall  f1-score   support
+           0     0.9196    0.9005    0.9099       432
+           1     0.7650    0.8046    0.7843       174
+    accuracy                         0.8729       606
+   macro avg     0.8423    0.8525    0.8471       606
+weighted avg     0.8752    0.8729    0.8739       606
+2026-07-31 15:25:51 INFO     Epoch 28: train_loss=0.1966 [l_bin=0.0235 l_bal=1.0945 r_div=0.1000 l_weak=0.0581 l_route_t=0.0451] eval_loss=1.1821 metrics={'acc': 0.8729372937293729, 'precision': 0.8423245359066776, 'recall': 0.8525303320561941, 'f1': 0.8471276229790161}
+2026-07-31 15:25:51 INFO     EarlyStopping Counter: 11 out of 20.
+2026-07-31 15:25:51 INFO     Discovering pattern centers before finetune epoch 29.
+2026-07-31 15:25:56 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=29).
+2026-07-31 15:26:13 INFO                   precision    recall  f1-score   support
+           0     0.8962    0.9398    0.9175       432
+           1     0.8301    0.7299    0.7768       174
+    accuracy                         0.8795       606
+   macro avg     0.8632    0.8348    0.8471       606
+weighted avg     0.8772    0.8795    0.8771       606
+2026-07-31 15:26:13 INFO     Epoch 29: train_loss=0.1197 [l_bin=0.0121 l_bal=1.0631 r_div=0.0946 l_weak=0.0003 l_route_t=0.0004] eval_loss=1.1885 metrics={'acc': 0.8795379537953796, 'precision': 0.8631563000476129, 'recall': 0.8348499361430396, 'f1': 0.847136267039859}
+2026-07-31 15:26:13 INFO     EarlyStopping Counter: 12 out of 20.
+2026-07-31 15:26:13 INFO     Discovering pattern centers before finetune epoch 30.
+2026-07-31 15:26:18 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=30).
+2026-07-31 15:26:36 INFO                   precision    recall  f1-score   support
+           0     0.9246    0.8796    0.9015       432
+           1     0.7333    0.8218    0.7751       174
+    accuracy                         0.8630       606
+   macro avg     0.8290    0.8507    0.8383       606
+weighted avg     0.8697    0.8630    0.8652       606
+2026-07-31 15:26:36 INFO     Epoch 30: train_loss=0.1497 [l_bin=0.0208 l_bal=1.0612 r_div=0.1369 l_weak=0.0212 l_route_t=0.0013] eval_loss=1.3749 metrics={'acc': 0.863036303630363, 'precision': 0.8289537712895376, 'recall': 0.8507343550447, 'f1': 0.8383049310920155}
+2026-07-31 15:26:36 INFO     EarlyStopping Counter: 13 out of 20.
+2026-07-31 15:26:36 INFO     Discovering pattern centers before finetune epoch 31.
+2026-07-31 15:26:41 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=31).
+2026-07-31 15:26:58 INFO                   precision    recall  f1-score   support
+           0     0.9189    0.8912    0.9048       432
+           1     0.7487    0.8046    0.7756       174
+    accuracy                         0.8663       606
+   macro avg     0.8338    0.8479    0.8402       606
+weighted avg     0.8700    0.8663    0.8677       606
+2026-07-31 15:26:58 INFO     Epoch 31: train_loss=0.1342 [l_bin=0.0256 l_bal=1.0672 r_div=0.1641 l_weak=0.0002 l_route_t=0.0002] eval_loss=1.2201 metrics={'acc': 0.8663366336633663, 'precision': 0.8337587584393705, 'recall': 0.8479007024265646, 'f1': 0.8402205650188308}
+2026-07-31 15:26:58 INFO     EarlyStopping Counter: 14 out of 20.
+2026-07-31 15:26:58 INFO     Discovering pattern centers before finetune epoch 32.
+2026-07-31 15:27:03 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=32).
+2026-07-31 15:27:21 INFO                   precision    recall  f1-score   support
+           0     0.9085    0.9190    0.9137       432
+           1     0.7929    0.7701    0.7813       174
+    accuracy                         0.8762       606
+   macro avg     0.8507    0.8445    0.8475       606
+weighted avg     0.8753    0.8762    0.8757       606
+2026-07-31 15:27:21 INFO     Epoch 32: train_loss=0.1253 [l_bin=0.0141 l_bal=1.0761 r_div=0.1257 l_weak=0.0011 l_route_t=0.0126] eval_loss=1.2282 metrics={'acc': 0.8762376237623762, 'precision': 0.8506831137529958, 'recall': 0.8445482120051085, 'f1': 0.8475175044536967}
+2026-07-31 15:27:21 INFO     EarlyStopping Counter: 15 out of 20.
+2026-07-31 15:27:21 INFO     Discovering pattern centers before finetune epoch 33.
+2026-07-31 15:27:26 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=33).
+2026-07-31 15:27:43 INFO                   precision    recall  f1-score   support
+           0     0.8877    0.9514    0.9184       432
+           1     0.8531    0.7011    0.7697       174
+    accuracy                         0.8795       606
+   macro avg     0.8704    0.8263    0.8441       606
+weighted avg     0.8778    0.8795    0.8757       606
+2026-07-31 15:27:43 INFO     Epoch 33: train_loss=0.1168 [l_bin=0.0080 l_bal=1.0751 r_div=0.0991 l_weak=0.0002 l_route_t=0.0009] eval_loss=1.1642 metrics={'acc': 0.8795379537953796, 'precision': 0.8704179190140313, 'recall': 0.8262691570881227, 'f1': 0.8440759212590099}
+2026-07-31 15:27:43 INFO     EarlyStopping Counter: 16 out of 20.
+2026-07-31 15:27:43 INFO     Discovering pattern centers before finetune epoch 34.
+2026-07-31 15:27:48 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=34).
+2026-07-31 15:28:05 INFO                   precision    recall  f1-score   support
+           0     0.9133    0.9028    0.9080       432
+           1     0.7654    0.7874    0.7762       174
+    accuracy                         0.8696       606
+   macro avg     0.8394    0.8451    0.8421       606
+weighted avg     0.8709    0.8696    0.8702       606
+2026-07-31 15:28:05 INFO     Epoch 34: train_loss=0.1507 [l_bin=0.0287 l_bal=1.0779 r_div=0.0922 l_weak=0.0132 l_route_t=0.0020] eval_loss=1.2255 metrics={'acc': 0.8696369636963697, 'precision': 0.8393560373137258, 'recall': 0.8450670498084292, 'f1': 0.8421182810237875}
+2026-07-31 15:28:05 INFO     EarlyStopping Counter: 17 out of 20.
+2026-07-31 15:28:05 INFO     Discovering pattern centers before finetune epoch 35.
+2026-07-31 15:28:10 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=35).
+2026-07-31 15:28:27 INFO                   precision    recall  f1-score   support
+           0     0.9103    0.9167    0.9135       432
+           1     0.7895    0.7759    0.7826       174
+    accuracy                         0.8762       606
+   macro avg     0.8499    0.8463    0.8481       606
+weighted avg     0.8756    0.8762    0.8759       606
+2026-07-31 15:28:27 INFO     Epoch 35: train_loss=0.1288 [l_bin=0.0206 l_bal=1.0700 r_div=0.0889 l_weak=0.0002 l_route_t=0.0013] eval_loss=1.1869 metrics={'acc': 0.8762376237623762, 'precision': 0.8499092558983666, 'recall': 0.8462643678160919, 'f1': 0.8480517526703777}
+2026-07-31 15:28:27 INFO     EarlyStopping Counter: 18 out of 20.
+2026-07-31 15:28:27 INFO     Discovering pattern centers before finetune epoch 36.
+2026-07-31 15:28:33 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=36).
+2026-07-31 15:28:50 INFO                   precision    recall  f1-score   support
+           0     0.9089    0.9236    0.9162       432
+           1     0.8024    0.7701    0.7859       174
+    accuracy                         0.8795       606
+   macro avg     0.8556    0.8469    0.8511       606
+weighted avg     0.8783    0.8795    0.8788       606
+2026-07-31 15:28:50 INFO     Epoch 36: train_loss=0.1462 [l_bin=0.0292 l_bal=1.0811 r_div=0.1114 l_weak=0.0071 l_route_t=0.0073] eval_loss=1.0695 metrics={'acc': 0.8795379537953796, 'precision': 0.8556395182300547, 'recall': 0.8468630268199233, 'f1': 0.8510560214941534}
+2026-07-31 15:28:50 INFO     EarlyStopping Counter: 19 out of 20.
+2026-07-31 15:28:50 INFO     Discovering pattern centers before finetune epoch 37.
+2026-07-31 15:28:55 INFO     [TDP] refreshed 64 pattern centers (stage=target, epoch=37).
+2026-07-31 15:29:12 INFO                   precision    recall  f1-score   support
+           0     0.8943    0.9398    0.9165       432
+           1     0.8289    0.7241    0.7730       174
+    accuracy                         0.8779       606
+   macro avg     0.8616    0.8320    0.8447       606
+weighted avg     0.8755    0.8779    0.8753       606
+2026-07-31 15:29:12 INFO     Epoch 37: train_loss=0.1952 [l_bin=0.0168 l_bal=1.0601 r_div=0.1300 l_weak=0.0692 l_route_t=0.0190] eval_loss=1.1281 metrics={'acc': 0.8778877887788779, 'precision': 0.8616102480871783, 'recall': 0.8319763729246488, 'f1': 0.8447423451370328}
+2026-07-31 15:29:12 INFO     EarlyStopping Counter: 20 out of 20.
+2026-07-31 15:29:17 INFO                   precision    recall  f1-score   support
+           0     0.9000    0.9583    0.9283       432
+           1     0.8767    0.7356    0.8000       174
+    accuracy                         0.8944       606
+   macro avg     0.8884    0.8470    0.8641       606
+weighted avg     0.8933    0.8944    0.8914       606
+2026-07-31 15:29:17 INFO     Best eval acc: 0.8944
+2026-07-31 15:29:17 INFO     Test metrics: {'acc': 0.8943894389438944, 'precision': 0.8883561643835616, 'recall': 0.8469827586206897, 'f1': 0.8641255605381166, 'classification_report': '              precision    recall  f1-score   support\n\n           0     0.9000    0.9583    0.9283       432\n           1     0.8767    0.7356    0.8000       174\n\n    accuracy                         0.8944       606\n   macro avg     0.8884    0.8470    0.8641       606\nweighted avg     0.8933    0.8944    0.8914       606\n'}
